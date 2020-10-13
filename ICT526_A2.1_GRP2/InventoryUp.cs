@@ -182,7 +182,7 @@ namespace ICT526_A2._1_GRP2
                     //AdminFunc admin = new AdminFunc();
                     //admin.Close();
 
-                    InventoryUp up = new InventoryUp();
+                    InventoryUp up = new InventoryUp(); 
                     this.Hide();
                     up.Show();
                 }

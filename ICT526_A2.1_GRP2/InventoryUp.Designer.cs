@@ -36,7 +36,7 @@
             this.grpbxIU = new System.Windows.Forms.GroupBox();
             this.lblcodeIU = new System.Windows.Forms.Label();
             this.cmbIU = new System.Windows.Forms.ComboBox();
-            this.btnbacktoIU = new System.Windows.Forms.Button();
+            this.btnbacktoIU1 = new System.Windows.Forms.Button();
             this.txtprcIU = new System.Windows.Forms.TextBox();
             this.btnupdateIU = new System.Windows.Forms.Button();
             this.txtdiscIU = new System.Windows.Forms.TextBox();
@@ -125,15 +125,15 @@
             this.cmbIU.TabIndex = 28;
             this.cmbIU.SelectedIndexChanged += new System.EventHandler(this.cmbIU_SelectedIndexChanged);
             // 
-            // btnbacktoIU
+            // btnbacktoIU1
             // 
-            this.btnbacktoIU.Location = new System.Drawing.Point(440, 210);
-            this.btnbacktoIU.Name = "btnbacktoIU";
-            this.btnbacktoIU.Size = new System.Drawing.Size(141, 65);
-            this.btnbacktoIU.TabIndex = 48;
-            this.btnbacktoIU.Text = "back to inventory management";
-            this.btnbacktoIU.UseVisualStyleBackColor = true;
-            this.btnbacktoIU.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnbacktoIU1.Location = new System.Drawing.Point(440, 210);
+            this.btnbacktoIU1.Name = "btnbacktoIU1";
+            this.btnbacktoIU1.Size = new System.Drawing.Size(141, 65);
+            this.btnbacktoIU1.TabIndex = 48;
+            this.btnbacktoIU1.Text = "back to inventory management";
+            this.btnbacktoIU1.UseVisualStyleBackColor = true;
+            this.btnbacktoIU1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtprcIU
             // 
@@ -236,7 +236,7 @@
             this.Controls.Add(this.quanIU);
             this.Controls.Add(this.nameIU);
             this.Controls.Add(this.grpbxIU);
-            this.Controls.Add(this.btnbacktoIU);
+            this.Controls.Add(this.btnbacktoIU1);
             this.Controls.Add(this.txtprcIU);
             this.Controls.Add(this.btnupdateIU);
             this.Controls.Add(this.txtdiscIU);
@@ -268,7 +268,7 @@
         private System.Windows.Forms.GroupBox grpbxIU;
         private System.Windows.Forms.Label lblcodeIU;
         private System.Windows.Forms.ComboBox cmbIU;
-        private System.Windows.Forms.Button btnbacktoIU;
+        private System.Windows.Forms.Button btnbacktoIU1;
         private System.Windows.Forms.TextBox txtprcIU;
         private System.Windows.Forms.Button btnupdateIU;
         private System.Windows.Forms.TextBox txtdiscIU;

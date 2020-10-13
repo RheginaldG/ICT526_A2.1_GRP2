@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ICT526_A2._1_GRP2
 {
+
+    /* Inventory class made by Gregorio, Rheginald */
     class Inventory
     {
         public string Name { get; set; }
