@@ -16,7 +16,7 @@ namespace ICT526_A2._1_GRP2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InventoryMan());
+            Application.Run(new FormLogin());
         }
     }
 }
