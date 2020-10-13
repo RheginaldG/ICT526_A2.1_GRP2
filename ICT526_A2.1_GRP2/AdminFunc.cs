@@ -19,14 +19,14 @@ namespace ICT526_A2._1_GRP2
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-           // Checkout cf = new Checkout();
-           // cf.ShowDialog();
+            Checkout cf = new Checkout();
+            cf.ShowDialog();
         }
 
         private void btnInvMan_Click(object sender, EventArgs e)
         {
-            InventoryMan cf = new InventoryMan();
-            cf.ShowDialog();
+            InventoryMan IM = new InventoryMan();
+            IM.ShowDialog();
         }
 
         private void AdminFunc_FormClosed(object sender, FormClosedEventArgs e)
