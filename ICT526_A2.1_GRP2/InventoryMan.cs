@@ -58,7 +58,7 @@ namespace ICT526_A2._1_GRP2
             //creating the table for the dataInv datagridview 
 
 
-            using (StreamReader SR = new StreamReader(@".\InventoryList.txt")) 
+            using (StreamReader SR = new StreamReader(@".\InventoryList.txt"))
             {
                 while (!SR.EndOfStream)
                 {
@@ -104,7 +104,9 @@ namespace ICT526_A2._1_GRP2
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+       
+
+        private void btnAddIM_Click(object sender, EventArgs e)
         {
             string commaspacecheck = ", "; //needed to check if the text entered has a comma and a space, prevents issues later when the file is read again. 
             int itemcodeparse;
@@ -196,15 +198,9 @@ namespace ICT526_A2._1_GRP2
                 txtQuanIM.Clear();
                 //clears all the textboxes
             }
-
-
-
-
-
-
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdateIM_Click(object sender, EventArgs e)
         {
             this.Hide();
 
@@ -216,7 +212,6 @@ namespace ICT526_A2._1_GRP2
 
             //opens the inventory update form, also hides this form to prevent corruptions of the text file
             //just in case the user updates data from this form and also on the inventory update form
-
         }
     }
 }

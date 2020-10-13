@@ -123,6 +123,7 @@
             this.cmbIU.Name = "cmbIU";
             this.cmbIU.Size = new System.Drawing.Size(170, 21);
             this.cmbIU.TabIndex = 28;
+            this.cmbIU.SelectedIndexChanged += new System.EventHandler(this.cmbIU_SelectedIndexChanged);
             // 
             // btnbacktoIU
             // 
@@ -149,6 +150,7 @@
             this.btnupdateIU.TabIndex = 47;
             this.btnupdateIU.Text = "Update Item";
             this.btnupdateIU.UseVisualStyleBackColor = true;
+            this.btnupdateIU.Click += new System.EventHandler(this.btnupdateIU_Click);
             // 
             // txtdiscIU
             // 

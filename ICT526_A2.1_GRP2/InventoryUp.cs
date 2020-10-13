@@ -91,7 +91,39 @@ namespace ICT526_A2._1_GRP2
             listpop();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        
+
+     
+
+     
+
+   
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            InventoryMan frm1 = new InventoryMan();
+            frm1.ShowDialog();
+        }
+
+        private void cmbIU_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Inventory selecteditem = (Inventory)cmbIU.SelectedItem;
+            lblNameIU.Text = selecteditem.Name;
+            lblqtyIU.Text = selecteditem.Quantity;
+            lblcolIU.Text = selecteditem.Color;
+            lblprcIU.Text = selecteditem.Price;
+            lbldiscIU.Text = selecteditem.Discount;
+            lblcodeIU.Text = selecteditem.ItemCode;
+
+            txtNameIU.Text = selecteditem.Name;
+            txtQtyIU.Text = selecteditem.Quantity;
+            txtclrIU.Text = selecteditem.Color;
+            txtdiscIU.Text = selecteditem.Discount;
+            txtprcIU.Text = selecteditem.Price;
+        }
+
+        private void btnupdateIU_Click(object sender, EventArgs e)
         {
             string commaspacecheck = ", ";
             int quantityparse;
@@ -153,64 +185,8 @@ namespace ICT526_A2._1_GRP2
                     InventoryUp up = new InventoryUp();
                     this.Hide();
                     up.Show();
-
-
-
-
-
-
-
-
                 }
-
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            InventoryMan frm1 = new InventoryMan();
-            frm1.ShowDialog();
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-            Inventory selecteditem = (Inventory)cmbIU.SelectedItem;
-            lblNameIU.Text = selecteditem.Name;
-            lblqtyIU.Text = selecteditem.Quantity;
-            lblcolIU.Text = selecteditem.Color;
-            lblprcIU.Text = selecteditem.Price;
-            lbldiscIU.Text = selecteditem.Discount;
-            lblcodeIU.Text = selecteditem.ItemCode;
-
-            txtNameIU.Text = selecteditem.Name;
-            txtQtyIU.Text = selecteditem.Quantity;
-            txtclrIU.Text = selecteditem.Color;
-            txtdiscIU.Text = selecteditem.Discount;
-            txtprcIU.Text = selecteditem.Price;
-
-
-
-
-
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-    }
+                }
+            }
 }
