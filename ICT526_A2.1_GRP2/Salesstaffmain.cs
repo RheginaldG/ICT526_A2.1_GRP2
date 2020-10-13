@@ -19,8 +19,8 @@ namespace ICT526_A2._1_GRP2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Checkout cf = new Checkout();
-            //cf.Show();
+            Checkout cf = new Checkout();
+            cf.Show();
         }
 
         private void Salesstaffmain_FormClosed(object sender, FormClosedEventArgs e)
