@@ -58,7 +58,7 @@ namespace ICT526_A2._1_GRP2
             //creating the table for the dataInv datagridview 
 
 
-            using (StreamReader SR = new StreamReader(@".\InventoryList.txt")) //streamreading of the inventorylist.txt
+            using (StreamReader SR = new StreamReader(@".\InventoryList.txt")) 
             {
                 while (!SR.EndOfStream)
                 {
