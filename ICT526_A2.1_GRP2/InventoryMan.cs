@@ -146,9 +146,9 @@ namespace ICT526_A2._1_GRP2
             {
                 int k = 0;
                 Random rand = new Random();
-                int rand_num = rand.Next(300, 9000);
+                int rand_num = rand.Next(300, 15000);
                 string orig = txtCodeIM.Text.ToString();
-                for (int i = 0; i < dataInvIM.Rows.Count; i++) //checks if there is a duplicate itemcode adds to set it apart from the rest
+                for (int i = 0; i < dataInvIM.Rows.Count; i++) //checks if there is a duplicate itemcode adds a random number to set it apart from the rest
                 {
 
                     if (txtCodeIM.Text == dataInvIM.Rows[i].Cells[1].Value.ToString())
