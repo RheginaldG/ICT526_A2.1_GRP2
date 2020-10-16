@@ -145,22 +145,24 @@ namespace ICT526_A2._1_GRP2
             else //the new item is now cleared to br written
             {
                 int k = 0;
+                Random rand = new Random();
+                int rand_num = rand.Next(300, 9000);
                 string orig = txtCodeIM.Text.ToString();
                 for (int i = 0; i < dataInvIM.Rows.Count; i++) //checks if there is a duplicate itemcode adds +1 to set it apart from the 
                 {
 
                     if (txtCodeIM.Text == dataInvIM.Rows[i].Cells[1].Value.ToString())
                     {
-                        k = int.Parse(txtCodeIM.Text) + 1;
+                        k = int.Parse(txtCodeIM.Text) + rand_num;
                         
                        txtCodeIM.Text = Convert.ToString(k);
-                       
+                       string renameconfirm = "Item Code: " + orig.ToString() + " Has been change into " + txtCodeIM.Text.ToString() + " due to a similar item code entry.";
+                MessageBox.Show(renameconfirm);
                     }
 
 
                 }
-                string renameconfirm = "Item Code: " + orig.ToString() + " Has been change into " + txtCodeIM.Text.ToString() + " due to a similar item code entry.";
-                MessageBox.Show(renameconfirm);
+                
 
                 Inventory inv = new Inventory
                 {
