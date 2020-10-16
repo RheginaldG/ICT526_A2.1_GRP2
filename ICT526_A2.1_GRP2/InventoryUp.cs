@@ -92,14 +92,6 @@ namespace ICT526_A2._1_GRP2
             listpop();
         }
 
-        
-
-     
-
-     
-
-   
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
