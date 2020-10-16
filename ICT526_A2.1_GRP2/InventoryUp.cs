@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 
 namespace ICT526_A2._1_GRP2
 {
+    /* Inventory Update made by Gregorio, Rheginald */
     public partial class InventoryUp : Form
     {
         List<Inventory> ic = new List<Inventory>();

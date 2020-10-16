@@ -11,6 +11,7 @@ using System.IO;
 
 namespace ICT526_A2._1_GRP2
 {
+    /* Inventory Management made by Gregorio, Rheginald */
     public partial class InventoryMan : Form
     {
 
@@ -143,6 +144,19 @@ namespace ICT526_A2._1_GRP2
 
             else //the new item is now cleared to br written
             {
+                int k = 0;
+                for (int i = 0; i < dataInvIM.Rows.Count; i++) //checks if there is a duplicate itemcode adds +1 to set it apart from the 
+                {
+
+                    if (txtCodeIM.Text == dataInvIM.Rows[i].Cells[1].Value.ToString())
+                    {
+                        k = int.Parse(txtCodeIM.Text) + 1;
+
+                        txtCodeIM.Text = Convert.ToString(k);
+                    }
+
+
+                }
 
                 Inventory inv = new Inventory
                 {
