@@ -1,0 +1,16 @@
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\bin\Debug\ICT526_A2.1_GRP2.exe.config
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\bin\Debug\ICT526_A2.1_GRP2.exe
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\bin\Debug\ICT526_A2.1_GRP2.pdb
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2.1_GRP2.csprojAssemblyReference.cache
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2._1_GRP2.InventoryMan.resources
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2._1_GRP2.InventoryUp.resources
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2._1_GRP2.Properties.Resources.resources
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2.1_GRP2.csproj.GenerateResource.cache
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2.1_GRP2.csproj.CoreCompileInputs.cache
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2.1_GRP2.exe
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2.1_GRP2.pdb
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2._1_GRP2.AdminFunc.resources
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2._1_GRP2.Checkout.resources
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2._1_GRP2.Invoiceview.resources
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2._1_GRP2.FormLogin.resources
+C:\Users\OEM\source\repos\ICT526_A2.1_GRP2\ICT526_A2.1_GRP2\obj\Debug\ICT526_A2._1_GRP2.Salesstaffmain.resources

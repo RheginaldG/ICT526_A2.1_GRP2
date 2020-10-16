@@ -1,0 +1,6 @@
+employee1|emppassword|sales staff
+emp2|pass2|sales staff
+admin1|password|admin
+admin2|password3|admin
+rhegie|1|admin
+k|k|admin
