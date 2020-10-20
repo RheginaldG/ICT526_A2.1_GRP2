@@ -12,7 +12,9 @@ using System.Text.RegularExpressions;
 
 namespace ICT526_A2._1_GRP2
 {
-    /* Inventory Update made by Gregorio, Rheginald */
+    /* ID: 1815101
+     Author: Rheginald Gregorio
+    Description: Updates the product details of a product*/
     public partial class InventoryUp : Form
     {
         List<Inventory> ic = new List<Inventory>();

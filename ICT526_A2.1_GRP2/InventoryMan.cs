@@ -11,7 +11,9 @@ using System.IO;
 
 namespace ICT526_A2._1_GRP2
 {
-    /* Inventory Management made by Gregorio, Rheginald */
+    /* ID: 1815101
+     Author: Rheginald Gregorio
+    Description:  adds new products with their product details.*/
     public partial class InventoryMan : Form
     {
 
