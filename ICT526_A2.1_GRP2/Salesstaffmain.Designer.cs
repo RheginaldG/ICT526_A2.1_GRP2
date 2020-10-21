@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Smck_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // Smck_btn
             // 
-            this.button1.Location = new System.Drawing.Point(128, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 84);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Check Out";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Smck_btn.Location = new System.Drawing.Point(128, 120);
+            this.Smck_btn.Name = "Smck_btn";
+            this.Smck_btn.Size = new System.Drawing.Size(153, 84);
+            this.Smck_btn.TabIndex = 0;
+            this.Smck_btn.Text = "Check Out";
+            this.Smck_btn.UseVisualStyleBackColor = true;
+            this.Smck_btn.Click += new System.EventHandler(this.Smck_btn_Click);
             // 
             // Salesstaffmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 328);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Smck_btn);
             this.Name = "Salesstaffmain";
             this.Text = "Staff Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Salesstaffmain_FormClosed);
@@ -56,6 +56,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Smck_btn;
     }
 }

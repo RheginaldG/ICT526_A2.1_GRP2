@@ -47,14 +47,15 @@ namespace ICT526_A2._1_GRP2
             col4.Name = "Total";
             col4.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             Confirmprodlist.Columns.Add(col4);
+            //creating the table for the Confirmprodlist datagridview 
 
-          
 
         }
         public void SetList(string A, string B, string C, string D, string E)
         {
             Confirmprodlist.Rows.Add(A, B, string.Format("${0}", C), string.Format("${0} - ${1}", D, E));
         }
+        //By using this function, user can add rows in confirmprodlist
 
         public void Gettpr(decimal T)
         {
@@ -66,18 +67,22 @@ namespace ICT526_A2._1_GRP2
             gst = decimal.Round(gst, 2);
             subtotal = decimal.Round(subtotal, 2);
 
-        }
+        } //By using this function, user can get information of total price and able to caculate gst and sub total price
 
-        private void Form4_Load(object sender, EventArgs e)
+        private void Invoiceview_Load(object sender, EventArgs e)
         {
 
             
-            label8.Text = DateTime.Now.ToString("ddMMyyyy");
-            label9.Text = DateTime.Now.ToString("t");
-            label10.Text = Convert.ToString(subtotal);
-            label11.Text = Convert.ToString(gst);
-            label12.Text = Convert.ToString(totalpr);
+            time.Text = DateTime.Now.ToString("t");
+            Date.Text = DateTime.Now.ToString("ddMMyyyy");
+            resultst.Text = Convert.ToString(subtotal) + "$";
+            resulttgst.Text = Convert.ToString(gst) + "$";
+            resulttotal.Text = Convert.ToString(totalpr) + "$";
+            TBDALable.Text = Convert.ToString(totalpr) + "$";
+
+            //when invoiceview form load, Insert the corresponding text for each label's text.
         }
+
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -93,6 +98,18 @@ namespace ICT526_A2._1_GRP2
 
 
             this.Close();
+
+            //form is closed and invoice text file generated
+        }
+
+        private void resulttotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Confirmprodlist_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -28,73 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.PcodeLable = new System.Windows.Forms.Label();
+            this.Pquntitylable = new System.Windows.Forms.Label();
+            this.Iquntity_tBox = new System.Windows.Forms.TextBox();
+            this.CO_addbtn = new System.Windows.Forms.Button();
+            this.CO_removebtn = new System.Windows.Forms.Button();
+            this.Item_input_comb = new System.Windows.Forms.ComboBox();
             this.Salesprodlist = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.CO_Payconfirmbtn = new System.Windows.Forms.Button();
+            this.tpr = new System.Windows.Forms.Label();
+            this.Totalprlabel = new System.Windows.Forms.Label();
+            this.CO_Closebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Salesprodlist)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // PcodeLable
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(250, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Product Code";
+            this.PcodeLable.AutoSize = true;
+            this.PcodeLable.Location = new System.Drawing.Point(250, 60);
+            this.PcodeLable.Name = "PcodeLable";
+            this.PcodeLable.Size = new System.Drawing.Size(120, 18);
+            this.PcodeLable.TabIndex = 0;
+            this.PcodeLable.Text = "Product Code";
             // 
-            // label2
+            // Pquntitylable
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(679, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Quantity";
+            this.Pquntitylable.AutoSize = true;
+            this.Pquntitylable.Location = new System.Drawing.Point(679, 60);
+            this.Pquntitylable.Name = "Pquntitylable";
+            this.Pquntitylable.Size = new System.Drawing.Size(74, 18);
+            this.Pquntitylable.TabIndex = 1;
+            this.Pquntitylable.Text = "Quantity";
             // 
-            // textBox1
+            // Iquntity_tBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(829, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 28);
-            this.textBox1.TabIndex = 2;
+            this.Iquntity_tBox.Location = new System.Drawing.Point(829, 55);
+            this.Iquntity_tBox.Name = "Iquntity_tBox";
+            this.Iquntity_tBox.Size = new System.Drawing.Size(100, 28);
+            this.Iquntity_tBox.TabIndex = 2;
             // 
-            // button1
+            // CO_addbtn
             // 
-            this.button1.Location = new System.Drawing.Point(1023, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 43);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.CO_addbtn.Location = new System.Drawing.Point(1023, 48);
+            this.CO_addbtn.Name = "CO_addbtn";
+            this.CO_addbtn.Size = new System.Drawing.Size(102, 43);
+            this.CO_addbtn.TabIndex = 5;
+            this.CO_addbtn.Text = "Add";
+            this.CO_addbtn.UseVisualStyleBackColor = true;
+            this.CO_addbtn.Click += new System.EventHandler(this.CO_addbtn_Click);
             // 
-            // button2
+            // CO_removebtn
             // 
-            this.button2.Location = new System.Drawing.Point(1144, 334);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 55);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.CO_removebtn.Location = new System.Drawing.Point(1144, 334);
+            this.CO_removebtn.Name = "CO_removebtn";
+            this.CO_removebtn.Size = new System.Drawing.Size(113, 55);
+            this.CO_removebtn.TabIndex = 6;
+            this.CO_removebtn.Text = "Remove";
+            this.CO_removebtn.UseVisualStyleBackColor = true;
+            this.CO_removebtn.Click += new System.EventHandler(this.CO_removebtn_Click);
             // 
-            // comboBox1
+            // Item_input_comb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(394, 57);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 26);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Item_input_comb.FormattingEnabled = true;
+            this.Item_input_comb.Location = new System.Drawing.Point(394, 57);
+            this.Item_input_comb.Name = "Item_input_comb";
+            this.Item_input_comb.Size = new System.Drawing.Size(132, 26);
+            this.Item_input_comb.TabIndex = 7;
             // 
             // Salesprodlist
             // 
@@ -109,47 +108,47 @@
             this.Salesprodlist.Size = new System.Drawing.Size(1035, 438);
             this.Salesprodlist.TabIndex = 23;
             // 
-            // button3
+            // CO_Payconfirmbtn
             // 
-            this.button3.Location = new System.Drawing.Point(921, 677);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(191, 86);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Payment Confirmed";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.CO_Payconfirmbtn.Location = new System.Drawing.Point(921, 677);
+            this.CO_Payconfirmbtn.Name = "CO_Payconfirmbtn";
+            this.CO_Payconfirmbtn.Size = new System.Drawing.Size(191, 86);
+            this.CO_Payconfirmbtn.TabIndex = 24;
+            this.CO_Payconfirmbtn.Text = "Payment Confirmed";
+            this.CO_Payconfirmbtn.UseVisualStyleBackColor = true;
+            this.CO_Payconfirmbtn.Click += new System.EventHandler(this.CO_Payconfirmbtn_Click);
             // 
-            // label3
+            // tpr
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(890, 604);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 24);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Total Price : ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.tpr.AutoSize = true;
+            this.tpr.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tpr.Location = new System.Drawing.Point(890, 604);
+            this.tpr.Name = "tpr";
+            this.tpr.Size = new System.Drawing.Size(160, 24);
+            this.tpr.TabIndex = 25;
+            this.tpr.Text = "Total Price : ";
+            this.tpr.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // Totalprlabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(1056, 604);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 24);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "0";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.Totalprlabel.AutoSize = true;
+            this.Totalprlabel.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Totalprlabel.Location = new System.Drawing.Point(1056, 604);
+            this.Totalprlabel.Name = "Totalprlabel";
+            this.Totalprlabel.Size = new System.Drawing.Size(24, 24);
+            this.Totalprlabel.TabIndex = 26;
+            this.Totalprlabel.Text = "0";
+            this.Totalprlabel.Click += new System.EventHandler(this.label4_Click);
             // 
-            // button4
+            // CO_Closebtn
             // 
-            this.button4.Location = new System.Drawing.Point(77, 665);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 86);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Close Checkout";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.CO_Closebtn.Location = new System.Drawing.Point(77, 665);
+            this.CO_Closebtn.Name = "CO_Closebtn";
+            this.CO_Closebtn.Size = new System.Drawing.Size(191, 86);
+            this.CO_Closebtn.TabIndex = 27;
+            this.CO_Closebtn.Text = "Close Checkout";
+            this.CO_Closebtn.UseVisualStyleBackColor = true;
+            this.CO_Closebtn.Click += new System.EventHandler(this.CO_Closebtn_Click);
             // 
             // Checkout
             // 
@@ -157,17 +156,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1383, 813);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.CO_Closebtn);
+            this.Controls.Add(this.Totalprlabel);
+            this.Controls.Add(this.tpr);
+            this.Controls.Add(this.CO_Payconfirmbtn);
             this.Controls.Add(this.Salesprodlist);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Item_input_comb);
+            this.Controls.Add(this.CO_removebtn);
+            this.Controls.Add(this.CO_addbtn);
+            this.Controls.Add(this.Iquntity_tBox);
+            this.Controls.Add(this.Pquntitylable);
+            this.Controls.Add(this.PcodeLable);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Checkout";
             this.Text = "Checkout";
@@ -180,16 +179,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label PcodeLable;
+        private System.Windows.Forms.Label Pquntitylable;
+        private System.Windows.Forms.TextBox Iquntity_tBox;
+        private System.Windows.Forms.Button CO_addbtn;
+        private System.Windows.Forms.Button CO_removebtn;
+        private System.Windows.Forms.ComboBox Item_input_comb;
         private System.Windows.Forms.DataGridView Salesprodlist;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button CO_Payconfirmbtn;
+        private System.Windows.Forms.Label tpr;
+        private System.Windows.Forms.Label Totalprlabel;
+        private System.Windows.Forms.Button CO_Closebtn;
     }
 }
