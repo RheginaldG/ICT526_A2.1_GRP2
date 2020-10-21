@@ -31,6 +31,8 @@ namespace ICT526_A2._1_GRP2
                 password.Add(itemn[1]);
                 title.Add(itemn[2]);
             }
+
+            //get the information of users from the text file
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -40,8 +42,8 @@ namespace ICT526_A2._1_GRP2
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (user.Contains(txtuser.Text) && password.Contains(txtpass.Text)) 
-                
+            if (user.Contains(txtuser.Text) && password.Contains(txtpass.Text)) // Check information have been entered correctly
+
             {
                 if (password[Array.IndexOf(user.ToArray(), txtuser.Text)] == txtpass.Text)
                 {
@@ -71,8 +73,8 @@ namespace ICT526_A2._1_GRP2
                     }
 
                 }
+                //Confirm the title and open the main form accessible to that title.
 
-             
 
             }
             else

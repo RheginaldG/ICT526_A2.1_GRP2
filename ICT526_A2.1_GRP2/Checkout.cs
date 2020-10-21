@@ -45,24 +45,17 @@ namespace ICT526_A2._1_GRP2
                     };
 
                     sic.Add(inv);
-                   /* Inventory codes = new Inventory
-                    {
-                        ItemCode = itemcode
-                    };
-
-                    sic.Add(codes);*/
+           
+                    Item_input_comb.Items.Add(inv); //with the help of public override string ItemCode the combobox will show the itemcode 
 
 
-                    comboBox1.Items.Add(inv); //with the help of public override string ItemCode the combobox will show the itemcode 
-
-
-                    comboBox1.AutoCompleteSource = AutoCompleteSource.CustomSource; //creates an auto complete for the combo box
-                    comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;    //this limits the mistake of writing a wrong item code 
-                    comboBox1.AutoCompleteCustomSource.Add(inv.ItemCode);           //if the itemcode does not exist, the the program will not show anything 
+                    Item_input_comb.AutoCompleteSource = AutoCompleteSource.CustomSource; //creates an auto complete for the combo box
+                    Item_input_comb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;    //this limits the mistake of writing a wrong item code 
+                    Item_input_comb.AutoCompleteCustomSource.Add(inv.ItemCode);           //if the itemcode does not exist, the the program will not show anything 
 
                 }
-                comboBox1.Items.RemoveAt(0);
-                comboBox1.AutoCompleteCustomSource.RemoveAt(0);
+                Item_input_comb.Items.RemoveAt(0);
+                Item_input_comb.AutoCompleteCustomSource.RemoveAt(0);
 
             }
         }
@@ -123,11 +116,7 @@ namespace ICT526_A2._1_GRP2
             listpop();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -138,76 +127,53 @@ namespace ICT526_A2._1_GRP2
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+           
+        private void CO_addbtn_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < Salesprodlist.Rows.Count; i++)
-            {
-                Salesprodlist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                if (Salesprodlist.Rows[i].Selected == true)
-                {
-                    for (int j = 0; j < sic.Count; j++)
-                    {
-                        if (sic[j].ItemCode == (string)Salesprodlist.Rows[i].Cells[0].Value)
-                        {
-                            sic[j].Quantity += Convert.ToDecimal(Salesprodlist.Rows[i].Cells[2].Value);
-                        }
-                    }
-                                                      
-                    totalpr -= Convert.ToDecimal(Salesprodlist.Rows[i].Cells[6].Value);
-                    Salesprodlist.Rows.Remove(Salesprodlist.Rows[i]);
-                }
-            }
-   
-            label4.Text = Convert.ToString(totalpr);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
             decimal Originprice;
             decimal disprice;
             decimal discountedprice;
             decimal qty;
             totalpr = 0;
 
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(comboBox1.Text))
+            if (string.IsNullOrEmpty(Iquntity_tBox.Text) || string.IsNullOrEmpty(Iquntity_tBox.Text))
             {
                 MessageBox.Show("Missing information", "Ooops", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }//Check if item code and quantity have been entered
 
             else
             {
-                if (decimal.TryParse(textBox1.Text, out qty))
+                if (decimal.TryParse(Iquntity_tBox.Text, out qty))//Check quantity have been entered correctly
                 {
 
-                  
-                        Inventory selectedproduct = (Inventory)comboBox1.SelectedItem;
+
+                    Inventory selectedproduct = (Inventory)Item_input_comb.SelectedItem;
 
 
-                    if (Convert.ToDecimal(textBox1.Text) > Convert.ToDecimal(selectedproduct.Quantity))
+                    if (Convert.ToDecimal(Iquntity_tBox.Text) > Convert.ToDecimal(selectedproduct.Quantity))
                     {
 
                         MessageBox.Show("You have entered a quantity that cannot be purchased.", "Ooops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
 
-                    }
+                    }//Check if user enter more than the number of items remaining in the system.
 
                     else
                     {
-                        Originprice = Convert.ToDecimal(textBox1.Text) * Convert.ToDecimal(selectedproduct.Price);
+                        Originprice = Convert.ToDecimal(Iquntity_tBox.Text) * Convert.ToDecimal(selectedproduct.Price);
                         disprice = Originprice * Convert.ToDecimal(selectedproduct.Discount) / 100;
                         discountedprice = Originprice - disprice;
 
-                        Salesprodlist.Rows.Add(selectedproduct.ItemCode, string.Format("{0},{1}", selectedproduct.Name, selectedproduct.Color), textBox1.Text, Originprice, selectedproduct.Discount, disprice, discountedprice);
+                        Salesprodlist.Rows.Add(selectedproduct.ItemCode, string.Format("{0},{1}", selectedproduct.Name, selectedproduct.Color), Iquntity_tBox.Text, Originprice, selectedproduct.Discount, disprice, discountedprice);
 
-                        selectedproduct.Quantity = Convert.ToString(Convert.ToDecimal(selectedproduct.Quantity) - Convert.ToDecimal(textBox1.Text));
+                        selectedproduct.Quantity = Convert.ToString(Convert.ToDecimal(selectedproduct.Quantity) - Convert.ToDecimal(Iquntity_tBox.Text));
 
 
                         for (int j = 0; j < sic.Count; j++)
                         {
                             if (sic[j].ItemCode == (string)selectedproduct.ItemCode)
                             {
-                              sic[j].Quantity = selectedproduct.Quantity;
+                                sic[j].Quantity = selectedproduct.Quantity;
                             }
                         }
 
@@ -220,35 +186,58 @@ namespace ICT526_A2._1_GRP2
 
                         }
 
-                        label4.Text = Convert.ToString(totalpr);
-                        comboBox1.Text = "";
-                        textBox1.Clear();
+                        Totalprlabel.Text = Convert.ToString(totalpr);
+                        Item_input_comb.Text = "";
+                        Iquntity_tBox.Clear();//clear the item quantity box text and item code box text after all processes are completed.
+
+                        //Enter the item information corresponding to the entered item code and the quantity entered into the list and show it to the user.
+                        //Then update the remaining quantity of the selected item.
                     }
 
 
-                  
+
                 }
-                else
+                else //when quantity have been entered incorrectly, messagebox show 
                 {
                     MessageBox.Show("Syntax error", "Ooops", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-               
+
             }
-
-           
-
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void CO_removebtn_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < Salesprodlist.Rows.Count; i++)
+            {
+                Salesprodlist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                if (Salesprodlist.Rows[i].Selected == true)
+                {
+                    for (int j = 0; j < sic.Count; j++)
+                    {
+                        if (sic[j].ItemCode == (string)Salesprodlist.Rows[i].Cells[0].Value)
+                        {
+                            sic[j].Quantity += Convert.ToDecimal(Salesprodlist.Rows[i].Cells[2].Value);
+                        }
+                    }//If the user wants to clear a particular item from the list, deletes the corresponding content from the list and updates the selected item remaining quantity by adding selected item quantity.
 
+                    totalpr -= Convert.ToDecimal(Salesprodlist.Rows[i].Cells[6].Value);
+                    Salesprodlist.Rows.Remove(Salesprodlist.Rows[i]);
+                }
+            }
+
+            Totalprlabel.Text = Convert.ToString(totalpr);
+            //And the total amount is changed and show.
+        }
+
+        private void CO_Payconfirmbtn_Click(object sender, EventArgs e)
+        {
             this.Close();
 
             if (Salesprodlist.Rows.Count == 0)
             {
                 MessageBox.Show("No item added", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }
+            }//If there is no registered item in the sales product list, the corresponding message is displayed.
 
             Salessystem sy1 = new Salessystem();
 
@@ -262,45 +251,34 @@ namespace ICT526_A2._1_GRP2
             sy1.Gettotalprice(totalpr);
             sy1.Openinvoice();
 
+            //Hand over the contents of the list and corrsponding information to the Salessystem.
+
             try
             {
 
                 StreamWriter IW = new StreamWriter(@".\InventoryList.txt");
-        
-                for (int i = 0; i < sic.Count; i++) 
-                {  
 
-                   IW.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", sic[i].Name, sic[i].ItemCode, sic[i].Quantity, sic[i].Color, sic[i].Price, sic[i].Discount);
-                                     
+                for (int i = 0; i < sic.Count; i++)
+                {
+
+                    IW.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", sic[i].Name, sic[i].ItemCode, sic[i].Quantity, sic[i].Color, sic[i].Price, sic[i].Discount);
+
                 }
-              
+
                 IW.Close();
-            }
+            }//Updates the changed items information to Itemlist text file
             catch (Exception h)
             {
                 MessageBox.Show("Exception: " + h.Message); //creates an exception if file creation ended up getting corrupted 
             }
+        }
 
-      
-
-
-
-
-           
+        private void CO_Closebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }//when close button pressed, form closed
 
 
  
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-      
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
