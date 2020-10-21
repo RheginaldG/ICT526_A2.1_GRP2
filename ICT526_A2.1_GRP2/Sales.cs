@@ -8,6 +8,11 @@ using System.Windows.Forms;
 
 namespace ICT526_A2._1_GRP2
 {
+    /* ID: 1814410
+     Author: Minsik Jeong
+    Description:  The sales system class used by the sales staff consists of the "Gettotalprice",  "Invoice_create" and "Openinvoice". "Gettotalprice" function, 
+    which gets the total amount of items which customer want to buy. it using for gst calculation. And the "Invoice_create" and "Openinvoice" function using for creating and verifying invoices. .*/
+
     class Salessystem
     {
 
@@ -15,9 +20,13 @@ namespace ICT526_A2._1_GRP2
 
         public void Gettotalprice(decimal T)
         {
-            invoiceview.Gettpr(T);
+            decimal totalpr = T;
+            decimal gst = totalpr * 3 / 23;
+            decimal subtotal = totalpr - gst;
+
+            invoiceview.Gettpr(T, gst, subtotal);
         }
-        //Hand over the information to the invoiceview form.
+        //Caculate gst, subtotal and Hand over the information to the invoiceview form.
 
         public void Openinvoice()
         {

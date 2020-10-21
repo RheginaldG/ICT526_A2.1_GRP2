@@ -11,6 +11,9 @@ using System.IO;
 
 namespace ICT526_A2._1_GRP2
 {
+    /* ID: 1814248
+   Author: Yungyeom Hwang
+  Description:  User Identification .*/
     public partial class FormLogin : Form
     {
         List<string> user = new List<string>();

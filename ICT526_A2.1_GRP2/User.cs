@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ICT526_A2._1_GRP2
 {
+    /* ID: 1814248
+     Author: Yungyeom Hwang
+    Description:  Set permissions according to user .*/
+
     abstract class User
     {
         protected string Username;

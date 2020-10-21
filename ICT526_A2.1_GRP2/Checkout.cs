@@ -11,6 +11,9 @@ using System.IO;
 
 namespace ICT526_A2._1_GRP2
 {
+    /* ID: 1814410
+     Author: Minsik Jeong
+    Description:  Set the check-out form layout and create functions that correspond to the form. */
     public partial class Checkout : Form
     {
         List<Inventory> sic = new List<Inventory>();
