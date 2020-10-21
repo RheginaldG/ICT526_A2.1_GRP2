@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace ICT526_A2._1_GRP2
 {
+    /* ID: 1814410
+     Author: Minsik Jeong
+    Description:  Set the Invoiceview form layout and create functions that correspond to the form..*/
     public partial class Invoiceview : Form
     {
         decimal totalpr;
@@ -57,17 +60,15 @@ namespace ICT526_A2._1_GRP2
         }
         //By using this function, user can add rows in confirmprodlist
 
-        public void Gettpr(decimal T)
+        public void Gettpr(decimal T, decimal G, decimal St)
         {
-            totalpr = T;
-            gst = totalpr * 3 / 23;
-            subtotal = totalpr - gst;
+            
 
-            totalpr = decimal.Round(totalpr, 2);
-            gst = decimal.Round(gst, 2);
-            subtotal = decimal.Round(subtotal, 2);
+            totalpr = decimal.Round(T, 2);
+            gst = decimal.Round(G, 2);
+            subtotal = decimal.Round(St, 2);
 
-        } //By using this function, user can get information of total price and able to caculate gst and sub total price
+        } //By using this function, user can get information of total price, gst and sub total price
 
         private void Invoiceview_Load(object sender, EventArgs e)
         {

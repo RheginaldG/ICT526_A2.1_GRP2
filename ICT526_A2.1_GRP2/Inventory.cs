@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ICT526_A2._1_GRP2
 {
+
+    /* ID: 1815101
+     Author: Rheginald Gregorio 
+    Description:  The Inventory Class focuses on inventory details of an item found on the inventory list text file .*/
     class Inventory
     {
         public string Name { get; set; }

@@ -12,6 +12,9 @@ using System.Text.RegularExpressions;
 
 namespace ICT526_A2._1_GRP2
 {
+    /* ID: 1815101
+     Author: Rheginald Gregorio
+    Description: Updates the product details of a product*/
     public partial class InventoryUp : Form
     {
         List<Inventory> ic = new List<Inventory>();
@@ -90,14 +93,6 @@ namespace ICT526_A2._1_GRP2
 
             listpop();
         }
-
-        
-
-     
-
-     
-
-   
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -182,7 +177,7 @@ namespace ICT526_A2._1_GRP2
                     //AdminFunc admin = new AdminFunc();
                     //admin.Close();
 
-                    InventoryUp up = new InventoryUp();
+                    InventoryUp up = new InventoryUp(); 
                     this.Hide();
                     up.Show();
                 }

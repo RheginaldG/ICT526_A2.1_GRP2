@@ -11,6 +11,9 @@ using System.IO;
 
 namespace ICT526_A2._1_GRP2
 {
+    /* ID: 1815101
+     Author: Rheginald Gregorio
+    Description:  adds new products with their product details.*/
     public partial class InventoryMan : Form
     {
 
@@ -143,6 +146,25 @@ namespace ICT526_A2._1_GRP2
 
             else //the new item is now cleared to br written
             {
+                int k = 0;
+                Random rand = new Random();
+                int rand_num = rand.Next(300, 15000);
+                string orig = txtCodeIM.Text.ToString();
+                for (int i = 0; i < dataInvIM.Rows.Count; i++) //checks if there is a duplicate itemcode adds a random number to set it apart from the rest
+                {
+
+                    if (txtCodeIM.Text == dataInvIM.Rows[i].Cells[1].Value.ToString())
+                    {
+                        k = int.Parse(txtCodeIM.Text) + rand_num;
+                        
+                       txtCodeIM.Text = Convert.ToString(k);
+                       string renameconfirm = "Item Code: " + orig.ToString() + " Has been change into " + txtCodeIM.Text.ToString() + " due to a similar item code entry.";
+                MessageBox.Show(renameconfirm);
+                    }
+
+
+                }
+                
 
                 Inventory inv = new Inventory
                 {
