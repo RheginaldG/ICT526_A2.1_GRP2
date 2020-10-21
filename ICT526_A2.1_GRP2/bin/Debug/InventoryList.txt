@@ -7,4 +7,5 @@ AJ1 shattered backboard, 90129, 10, orange, 200, 90
 AJ1 Air Dior, 77177, 5, white/skyblue, 1000, 5
 AJ1 Travis Scott, 30189, 90, White/Brown, 200, 20
 Casual Sandal, 30113, 1, 1, 1, 1
-asdad, 32516, 9, 9, 9, 9
+asdad, 32516, 7, 9, 10, 9
+AJ 1 Mindfulness, 38768, 30, off white/purple/green, 170, 30

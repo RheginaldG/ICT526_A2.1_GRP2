@@ -33,8 +33,9 @@ namespace ICT526_A2._1_GRP2
 
         public void Invoice_create(decimal Subtotal,decimal Totalgst, decimal Total, DataGridView Confirmprodlist)
         {
+
             string strDate = DateTime.Now.ToString("ddMMyyyy");
-            string strtime = DateTime.Now.ToString("t");
+            string strtime = DateTime.Now.ToString("HHmmss");
             StreamWriter invoicewr = new StreamWriter(String.Format(@"./Invoice{0}{1}.txt", strtime, strDate));
             //Instantiate text file constructor
             invoicewr.WriteLine("***********************************INVOICE***********************************");
